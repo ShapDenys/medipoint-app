@@ -1,6 +1,6 @@
 # Transkrypcja Wywiadu Pogłębionego i Testu Obserwacyjnego
 
-* **Projekt:** Usprawnienie rezerwacji wizyt w aplikacji medycznej „MediBlisko / Bliska Przychodnia”
+* **Projekt:** Usprawnienie rezerwacji wizyt w aplikacji medycznej „MediPoint / Bliska Przychodnia”
 * **Data badania:** 18 listopada 2026 r.
 * **Miejsce:** Mieszkanie respondentki, Poznań
 * **Prowadzący badanie (Moderator):** Denys

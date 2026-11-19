@@ -83,7 +83,7 @@ Zespół przeprowadził sesję kreatywnej burzy mózgów (*divergent thinking*).
 10. **Fizyczny przycisk w domu (IoT) podłączony do aplikacji:** Przycisk rezerwujący wizytę domową u stałego lekarza.
 
 ### Selekcja i synteza rozwiązania docelowego:
-Do realizacji w prototypie zakwalifikowano koncepcję **„MediBlisko – Dostępna Przychodnia & AI Concierge”**, łączącą:
+Do realizacji w prototypie zakwalifikowano koncepcję **„MediPoint – Dostępna Przychodnia & AI Concierge”**, łączącą:
 * **Uzdrowienie UI/UX:** Pełna hierarchia wizualna z jaskrawym przyciskiem CTA, tryb wysokiego kontrastu i powiększonego tekstu, interaktywna mapa z dużymi znacznikami.
 * **Integrację AI:** Konwersacyjny asystent medyczny podpowiadający placówkę i termin na podstawie prostego opisu objawów.
 * **3-krokowy, bezstresowy proces rezerwacji:** Wybór placówki -> Wybór godziny -> Natychmiastowe potwierdzenie.

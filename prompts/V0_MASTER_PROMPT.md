@@ -6,7 +6,7 @@
 ---
 
 ```markdown
-Create an accessible, modern, and empathetic web application in Next.js 14 (App Router) called "MediBlisko" (NearClinic) designed specifically to solve a major UX flaw in healthcare booking: elderly and non-tech-savvy users struggle to find the booking buttons and get lost in complicated clinic menus.
+Create an accessible, modern, and empathetic web application in Next.js 14 (App Router) called "MediPoint" (NearClinic) designed specifically to solve a major UX flaw in healthcare booking: elderly and non-tech-savvy users struggle to find the booking buttons and get lost in complicated clinic menus.
 
 ### Core UX Objectives & Problem Solution:
 1. IMPOSSIBLE TO MISS CTA BUTTONS: Every clinic card and detail view MUST have a huge, prominent, high-contrast, vibrantly styled "Umów wizytę" (Book Appointment) button (min height 48px, bold text, contrasting color like vibrant emerald green or vivid medical blue). On mobile, when a clinic is selected, a sticky bottom action bar keeps the "Umów wizytę teraz" button permanently visible.
@@ -19,7 +19,7 @@ Create an accessible, modern, and empathetic web application in Next.js 14 (App 
 
 ### Application Layout & Key Components:
 - Header:
-  - Logo "MediBlisko" with a health heart/cross icon.
+  - Logo "MediPoint" with a health heart/cross icon.
   - Location badge: "📍 Twoja lokalizacja: Poznań, Winogrady" (with an option to change).
   - Senior Mode switch ("Większe litery i kontrast").
   - Emergency 112 quick dial alert banner ("W stanie zagrożenia życia zadzwoń pod 112").

@@ -1,4 +1,4 @@
-# 🏥 MediBlisko (Accessible Clinic Booking)
+# 🏥 MediPoint (Accessible Clinic Booking)
 > **Projekt zrealizowany w ramach programu Intel® AI dla Przyszłych Pracowników (Moduł 13: Myślenie Projektowe / Design Thinking).**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
@@ -16,7 +16,7 @@
 
 W tradycyjnych rozwiązaniach przyciski rezerwacji (CTA) są często ukryte na dole strony, posiadają niski kontrast, giną wśród opisów regulaminów lub wymagają przejścia przez skomplikowane drzewo podmenu. Prowadzi to do rezygnacji użytkowników (zwłaszcza seniorów i osób z wadami wzroku) oraz wymusza powrót do wielogodzinnych kolejek na infoliniach telefonicznych.
 
-### Nasze Rozwiązanie: MediBlisko
+### Nasze Rozwiązanie: MediPoint
 Aplikacja webowa zaprojektowana z zachowaniem zasad **dostępności (Accessibility First)** oraz **wsparcia sztucznej inteligencji (AI Concierge)**:
 1. **Widoczne z daleka przyciski CTA:** Gigantyczny, kontrastowy przycisk `[ UMÓW WIZYTĘ ]` na każdej karcie przychodni oraz stały pasek dolny (Sticky Bottom Bar) na smartfonach.
 2. **Tryb Seniora (1-Click Switch):** Natychmiastowe powiększenie fontów (+25%), wysoki kontrast WCAG AAA i usunięcie elementów rozpraszających.
@@ -67,8 +67,8 @@ Po pobraniu kodu wygenerowanego przez v0 do folderu projektu:
 
 ```bash
 # 1. Klonowanie repozytorium
-git clone https://github.com/twoj-login/mediblizko-easy-booking.git
-cd mediblizko-easy-booking
+git clone https://github.com/twoj-login/medipoint-app.git
+cd medipoint-app
 
 # 2. Instalacja zależności
 npm install
@@ -84,7 +84,7 @@ Aplikacja będzie dostępna pod adresem: `http://localhost:3000`.
 ## 📁 Struktura Repozytorium
 
 ```text
-mediblizko-easy-booking/
+medipoint-app/
 ├── .gitignore                          # Standardowe wykluczenia dla Next.js i Office
 ├── package.json                        # Manifest zależności projektu
 ├── README.md                           # Główny opis projektu i instrukcja

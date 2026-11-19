@@ -1,4 +1,4 @@
-# Makiety i Architektura Informacji UI/UX: MediBlisko
+# Makiety i Architektura Informacji UI/UX: MediPoint
 
 ## 1. Porównanie: Przed vs Po Redesignie
 
@@ -9,7 +9,7 @@
 * Złożone menu z 5 podkategoriami świadczeń zanim użytkownik zobaczy kalendarz.
 * Małe ikony nawigacyjne (rozmiar 16px), zbyt mały obszar klikalny (tzw. touch target poniżej 28px).
 
-### ✅ NOWA WERSJA (MediBlisko – Dostępna i Przejrzysta):
+### ✅ NOWA WERSJA (MediPoint – Dostępna i Przejrzysta):
 * **Gigantyczny przycisk CTA:** Wysoki kontrast (zielony `#16a34a` lub błękit `#0284c7`), wysokość min. 54px, tekst 18px pogrubiony: `[ ZAREZERWUJ WIZYTĘ TERAZ ]`.
 * **Sticky Floating Bar:** Na urządzeniach mobilnych przycisk rezerwacji jest na stałe zakotwiczony u dołu ekranu wraz z informacją o najbliższym wolnym terminie (`„Najbliższy termin: Dzisiaj, 14:15”`).
 * **Tryb Seniora:** Przycisk w prawym górnym rogu podmienia wielkość fontu (+25%) i włącza tryb wysokiego kontrastu (WCAG AAA).
@@ -24,7 +24,7 @@
 
 ```text
 ┌──────────────────────────────────────────────────────────┐
-│  🏥 MediBlisko                       [ 👁️ Tryb Seniora ] │
+│  🏥 MediPoint                       [ 👁️ Tryb Seniora ] │
 ├──────────────────────────────────────────────────────────┤
 │                                                          │
 │   Znajdź najbliższą przychodnię i umów wizytę w 1 minutę │
