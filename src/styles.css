@@ -1,0 +1,285 @@
+/*
+ * Tailwind v4 entry: config lives here, with no tailwind.config.js or PostCSS plugin.
+ * Keep every @import in this top block. Web fonts load via <link> in src/routes/__root.tsx.
+ */
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+/* Senior Mode: larger type, high contrast, simplified layout. Toggled by .senior on <html>. */
+@custom-variant senior (&:where(.senior, .senior *));
+
+@theme inline {
+  --font-sans: "Atkinson Hyperlegible Next", "Atkinson Hyperlegible", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Lexend", "Atkinson Hyperlegible Next", ui-sans-serif, system-ui, sans-serif;
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-ring-offset-background: var(--background);
+
+  --color-cta: var(--cta);
+  --color-cta-hover: var(--cta-hover);
+  --color-cta-foreground: var(--cta-foreground);
+  --color-success: var(--success);
+  --color-success-soft: var(--success-soft);
+  --color-success-foreground: var(--success-foreground);
+  --color-emergency: var(--emergency);
+  --color-emergency-soft: var(--emergency-soft);
+  --color-emergency-foreground: var(--emergency-foreground);
+  --color-coral: var(--coral);
+  --color-map-land: var(--map-land);
+  --color-map-water: var(--map-water);
+  --color-map-park: var(--map-park);
+  --color-map-road: var(--map-road);
+
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+:root {
+  --radius: 0.875rem;
+  /* Warm cream paper + deep medical teal ink */
+  --background: oklch(0.985 0.008 95);
+  --foreground: oklch(0.24 0.035 215);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.24 0.035 215);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.24 0.035 215);
+  --primary: oklch(0.42 0.09 215);
+  --primary-foreground: oklch(0.99 0.005 95);
+  --secondary: oklch(0.95 0.025 180);
+  --secondary-foreground: oklch(0.3 0.06 200);
+  --muted: oklch(0.96 0.012 95);
+  --muted-foreground: oklch(0.44 0.03 215);
+  --accent: oklch(0.93 0.045 165);
+  --accent-foreground: oklch(0.28 0.07 170);
+  --destructive: oklch(0.52 0.2 27);
+  --destructive-foreground: oklch(0.99 0 0);
+  --border: oklch(0.89 0.018 180);
+  --input: oklch(0.62 0.03 210);
+  --ring: oklch(0.5 0.13 215);
+
+  /* The booking button: vibrant emerald, white text (AA for bold large text and above) */
+  --cta: oklch(0.5 0.15 155);
+  --cta-hover: oklch(0.44 0.14 155);
+  --cta-foreground: oklch(0.995 0 0);
+  --success: oklch(0.5 0.15 155);
+  --success-soft: oklch(0.94 0.06 155);
+  --success-foreground: oklch(0.3 0.09 155);
+  --emergency: oklch(0.52 0.2 25);
+  --emergency-soft: oklch(0.96 0.03 25);
+  --emergency-foreground: oklch(0.99 0 0);
+  --coral: oklch(0.74 0.13 32);
+
+  --map-land: oklch(0.96 0.02 120);
+  --map-water: oklch(0.85 0.06 220);
+  --map-park: oklch(0.89 0.07 145);
+  --map-road: oklch(1 0 0);
+
+  --gradient-hero:
+    radial-gradient(60% 80% at 85% 10%, oklch(0.92 0.06 165 / 0.9), transparent 70%),
+    radial-gradient(50% 60% at 0% 100%, oklch(0.94 0.04 40 / 0.7), transparent 70%);
+  --gradient-concierge: linear-gradient(135deg, oklch(0.36 0.08 215), oklch(0.3 0.07 190));
+  --shadow-card: 0 1px 2px oklch(0.24 0.035 215 / 0.06), 0 12px 32px -16px oklch(0.24 0.035 215 / 0.22);
+  --shadow-cta: 0 10px 24px -10px color-mix(in oklab, var(--cta) 70%, transparent);
+
+  --chart-1: oklch(0.646 0.222 41.116);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
+  --sidebar: oklch(0.984 0.003 247.858);
+  --sidebar-foreground: oklch(0.129 0.042 264.695);
+  --sidebar-primary: oklch(0.208 0.042 265.755);
+  --sidebar-primary-foreground: oklch(0.984 0.003 247.858);
+  --sidebar-accent: oklch(0.968 0.007 247.896);
+  --sidebar-accent-foreground: oklch(0.208 0.042 265.755);
+  --sidebar-border: oklch(0.929 0.013 255.508);
+  --sidebar-ring: oklch(0.704 0.04 256.788);
+}
+
+/* Senior Mode: +25% type, pure white/black, darker borders and buttons (AAA contrast) */
+html.senior {
+  font-size: 125%;
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.12 0 0);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.12 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.12 0 0);
+  --primary: oklch(0.3 0.09 235);
+  --primary-foreground: oklch(1 0 0);
+  --secondary: oklch(0.95 0 0);
+  --secondary-foreground: oklch(0.12 0 0);
+  --muted: oklch(0.96 0 0);
+  --muted-foreground: oklch(0.24 0 0);
+  --accent: oklch(0.93 0.05 155);
+  --accent-foreground: oklch(0.15 0.03 155);
+  --border: oklch(0.3 0 0);
+  --input: oklch(0.15 0 0);
+  --ring: oklch(0.3 0.15 260);
+  --cta: oklch(0.38 0.11 155);
+  --cta-hover: oklch(0.31 0.09 155);
+  --success: oklch(0.38 0.11 155);
+  --success-soft: oklch(0.95 0.04 155);
+  --success-foreground: oklch(0.22 0.06 155);
+  --emergency: oklch(0.44 0.18 27);
+  --emergency-soft: oklch(0.97 0.02 25);
+  --gradient-hero: none;
+  --gradient-concierge: linear-gradient(135deg, oklch(0.22 0.05 230), oklch(0.22 0.05 230));
+  --shadow-card: 0 0 0 1px oklch(0.3 0 0);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    font-size: 1.0625rem;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    letter-spacing: -0.01em;
+    text-wrap: balance;
+  }
+
+  .senior body {
+    line-height: 1.75;
+  }
+
+  .senior a {
+    text-decoration-thickness: 2px;
+  }
+
+  :focus-visible {
+    outline: 3px solid var(--ring);
+    outline-offset: 3px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@utility bg-hero-gradient {
+  background-image: var(--gradient-hero);
+}
+
+@utility bg-concierge {
+  background-image: var(--gradient-concierge);
+}
+
+@utility shadow-card {
+  box-shadow: var(--shadow-card);
+}
+
+@utility shadow-cta {
+  box-shadow: var(--shadow-cta);
+}
+
+@utility animate-fade-up {
+  animation: fade-up 0.45s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+@utility animate-pop {
+  animation: pop 0.55s cubic-bezier(0.2, 1.4, 0.4, 1) both;
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pop {
+  0% {
+    opacity: 0;
+    transform: scale(0.6);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Large-print receipt: only the ticket is printed */
+@media print {
+  body * {
+    visibility: hidden !important;
+  }
+  .print-area,
+  .print-area * {
+    visibility: visible !important;
+  }
+  .print-area {
+    position: absolute;
+    inset: 0 auto auto 0;
+    width: 100%;
+    font-size: 20pt;
+    color: black;
+  }
+  .no-print {
+    display: none !important;
+  }
+}

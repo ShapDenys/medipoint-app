@@ -85,9 +85,22 @@ Aplikacja będzie dostępna pod adresem: `http://localhost:3000`.
 
 ```text
 medipoint-app/
-├── .gitignore                          # Standardowe wykluczenia dla Next.js i Office
 ├── package.json                        # Manifest zależności projektu
-├── README.md                           # Główny opis projektu i instrukcja
+├── vite.config.ts                      # Konfiguracja Vite + TanStack Start + Tailwind
+├── tsconfig.json                       # Konfiguracja TypeScript
+├── AGENTS.md                           # Wytyczne architektoniczne aplikacji
+├── README.md                           # Główny opis projektu i dokumentacja
+├── public/                             # Zasoby statyczne (favicon, robots)
+├── src/                                # Kod źródłowy aplikacji
+│   ├── components/                     # Komponenty UI
+│   │   ├── medipoint/                  # Dedykowane komponenty (Hero, ClinicCard, BookingDialog, SiteHeader itp.)
+│   │   └── ui/                         # Komponenty bazowe (shadcn / Radix UI)
+│   ├── routes/                         # Trasy aplikacji (TanStack Start file-based routing)
+│   │   ├── __root.tsx                  # Główny layout aplikacji
+│   │   ├── index.tsx                   # Strona główna z wyszukiwarką i mapą
+│   │   └── przychodnia.$clinicId.tsx   # Szczegóły placówki z bezpośrednią rezerwacją
+│   ├── lib/                            # Logika biznesowa, dane przychodni, preferencje (Tryb Seniora)
+│   └── test/                           # Testy jednostkowe i integracyjne (Vitest)
 ├── docs/                               # Dokumentacja projektowa Design Thinking
 │   ├── RAPORT_DESIGN_THINKING_MODUL_13.md   # Oficjalny raport do zaliczenia modułu
 │   ├── PERSONA_SZABLON.md              # Wypełniona persona (format Markdown)
@@ -95,7 +108,7 @@ medipoint-app/
 │   ├── TRANSKRYPCJA_WYWIADU.md         # Zapis wywiadu pogłębionego z seniorką
 │   └── MAKIETY_WIREFRAMES.md           # Architektura ekranów i wireframe'y ASCII
 └── prompts/                            # Gotowe prompty do generowania i ulepszania
-    ├── V0_MASTER_PROMPT.md             # Główny prompt produkcyjny dla v0.dev
+    ├── V0_MASTER_PROMPT.md             # Główny prompt produkcyjny
     └── V0_ITERACJE_I_ROZSZERZENIA.md   # Prompty do kolejnych iteracji aplikacji
 ```
 
