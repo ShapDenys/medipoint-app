@@ -63,3 +63,10 @@ Aplikacja będzie dostępna pod adresem `http://localhost:3000`.
 npm test       # Uruchomienie testów jednostkowych (Vitest)
 npm run build  # Budowanie wersji produkcyjnej
 ```
+
+---
+
+## Wykonawcy
+
+- Denys Shapovalov
+- ............................................................

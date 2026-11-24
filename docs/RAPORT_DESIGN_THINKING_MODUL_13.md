@@ -8,9 +8,8 @@
 * **Temat zadania:** Usprawnienie aplikacji do wyszukiwania najbliższej przychodni oraz rezerwacji wizyty lekarskiej.
 * **Zidentyfikowany problem:** Użytkowników irytuje układ graficzny aplikacji, a szczególnie trudności w znalezieniu właściwych przycisków służących do rezerwacji wizyty.
 * **Członkowie zespołu projektowego:**
-  1. **Denys** — ............................................................
-  2. **Członek Zespołu 2** — ............................................................
-  3. **Członek Zespołu 3** — ............................................................
+  1. **Denys Shapovalov**
+  2. ............................................................
 * **Data sporządzenia raportu:** 24 listopada 2026 r.
 
 ---
@@ -104,6 +103,5 @@ Przejście przez wszystkie etapy myślenia projektowego pozwoliło skupić się 
 
 ### Podpisy członków grupy:
 
-1. Denys ............................................................................ (Data: ......................)
+1. Denys Shapovalov .................................................................. (Data: ......................)
 2. .................................................................................... (Data: ......................)
-3. .................................................................................... (Data: ......................)
