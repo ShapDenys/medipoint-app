@@ -263,21 +263,41 @@ html.senior {
   }
 }
 
-/* Large-print receipt: only the ticket is printed */
+/* Large-print receipt: only the dedicated portal ticket is printed on a clean A4 page */
+.print-ticket-root {
+  display: none;
+}
+
+@page {
+  size: A4 portrait;
+  margin: 14mm;
+}
+
 @media print {
-  body * {
-    visibility: hidden !important;
+  html,
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    height: auto !important;
+    overflow: visible !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
   }
-  .print-area,
-  .print-area * {
-    visibility: visible !important;
+  body > *:not(#print-ticket-root) {
+    display: none !important;
   }
-  .print-area {
-    position: absolute;
-    inset: 0 auto auto 0;
-    width: 100%;
-    font-size: 20pt;
-    color: black;
+  #print-ticket-root {
+    display: block !important;
+    position: static !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: visible !important;
+    background: #ffffff !important;
+    color: #000000 !important;
   }
   .no-print {
     display: none !important;

@@ -2,7 +2,7 @@ import { useNavigate } from "@tanstack/react-router";
 import {
   ArrowLeft,
   ArrowRight,
-  CalendarPlus,
+  CalendarCheck,
   CheckCircle2,
   DoorOpen,
   Home,
@@ -16,8 +16,8 @@ import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogDescription, DialogTitle } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { useAppointments } from "@/lib/appointments";
 import {
-  buildIcs,
   dayLabel,
   formatPhone,
   longDate,
@@ -40,6 +40,7 @@ import {
 import { cn } from "@/lib/utils";
 
 import { ContractBadge } from "./ClinicCard";
+import { PrintTicket } from "./PrintTicket";
 
 type Step = 1 | 2 | 3;
 const STEPS = ["Termin", "Dane pacjenta", "Potwierdzenie"] as const;
@@ -89,6 +90,7 @@ function StepProgress({ step }: { step: Step }) {
 
 export function BookingDialog({ clinic, open, onOpenChange, specialty }: BookingDialogProps) {
   const navigate = useNavigate();
+  const { addAppointment } = useAppointments();
   const [step, setStep] = useState<Step>(1);
   const [day, setDay] = useState<0 | 1 | 2>(0);
   const [slot, setSlot] = useState<Slot | null>(null);
@@ -132,26 +134,28 @@ export function BookingDialog({ clinic, open, onOpenChange, specialty }: Booking
       document.getElementById(`patient-${firstField}`)?.focus();
       return;
     }
-    setTicket(ticketNumber());
+    const newTicket = ticketNumber();
+    if (slot && doctor && when) {
+      addAppointment({
+        id: newTicket,
+        clinicId: clinic.id,
+        clinicName: clinic.name,
+        clinicAddress: clinic.address,
+        clinicPhone: clinic.phone,
+        nfz: clinic.nfz,
+        ...(clinic.priceFrom !== undefined ? { priceFrom: clinic.priceFrom } : {}),
+        doctorName: doctor.name,
+        doctorSpecialty: doctor.specialty,
+        doctorRoom: doctor.room,
+        dateIso: when.toISOString(),
+        time: slot.time,
+        patientName: patient.fullName.trim(),
+        patientPhone: formatPhone(normalisePhone(patient.phone) ?? ""),
+        createdAtIso: new Date().toISOString(),
+      });
+    }
+    setTicket(newTicket);
     setStep(3);
-  };
-
-  const downloadIcs = () => {
-    if (!slot || !when || !doctor) return;
-    const ics = buildIcs({
-      start: when,
-      minutes: 20,
-      title: `Wizyta: ${doctor.name} (${SPECIALTY_LABELS[doctor.specialty]})`,
-      location: `${clinic.name}, ${clinic.address}, gabinet ${doctor.room}`,
-      description: `Numer wizyty ${ticket}. Telefon do przychodni: ${clinic.phone}.`,
-      uid: ticket.replace("#", ""),
-    });
-    const url = URL.createObjectURL(new Blob([ics], { type: "text/calendar;charset=utf-8" }));
-    const a = document.createElement("a");
-    a.href = url;
-    a.download = `wizyta-${ticket.replace("#", "")}.ics`;
-    a.click();
-    setTimeout(() => URL.revokeObjectURL(url), 1000);
   };
 
   const field = (key: keyof PatientInfo) => ({
@@ -334,7 +338,7 @@ export function BookingDialog({ clinic, open, onOpenChange, specialty }: Booking
                 <p className="text-muted-foreground">Nie musisz nic więcej robić.</p>
               </div>
 
-              <section aria-label="Podsumowanie wizyty" className="print-area overflow-hidden rounded-3xl border-2 border-cta bg-card">
+              <section aria-label="Podsumowanie wizyty" className="overflow-hidden rounded-3xl border-2 border-cta bg-card">
                 <div className="flex items-center justify-between gap-2 bg-cta px-5 py-3 text-cta-foreground">
                   <span className="font-display text-lg font-semibold">MediPoint · potwierdzenie</span>
                   <span className="font-display text-xl font-bold tabular-nums">{ticket}</span>
@@ -383,6 +387,14 @@ export function BookingDialog({ clinic, open, onOpenChange, specialty }: Booking
                 </dl>
               </section>
 
+              <p className="no-print flex items-start gap-3 rounded-2xl bg-success-soft px-4 py-3 text-success-foreground">
+                <CalendarCheck aria-hidden="true" className="mt-0.5 size-6 shrink-0 text-cta" />
+                <span>
+                  Wizyta została <strong>automatycznie zapisana</strong> w Twoim kalendarzu{" "}
+                  <strong>Moje wizyty</strong> w MediPoint.
+                </span>
+              </p>
+
               <p className="no-print flex items-start gap-3 rounded-2xl bg-secondary px-4 py-3 text-secondary-foreground">
                 <MessageSquareText aria-hidden="true" className="mt-0.5 size-6 shrink-0 text-primary" />
                 <span>
@@ -422,9 +434,17 @@ export function BookingDialog({ clinic, open, onOpenChange, specialty }: Booking
                 <Printer aria-hidden="true" />
                 Drukuj (duży druk)
               </Button>
-              <Button variant="outline" size="xl" onClick={downloadIcs}>
-                <CalendarPlus aria-hidden="true" />
-                Dodaj do kalendarza
+              <Button
+                variant="outline"
+                size="xl"
+                onClick={() => {
+                  onOpenChange(false);
+                  navigate({ to: "/kalendarz" });
+                  window.scrollTo({ top: 0 });
+                }}
+              >
+                <CalendarCheck aria-hidden="true" />
+                Kalendarz wizyt
               </Button>
               <Button
                 variant="cta"
@@ -443,6 +463,25 @@ export function BookingDialog({ clinic, open, onOpenChange, specialty }: Booking
           )}
         </div>
       </DialogContent>
+      {open && step === 3 && slot && doctor && when && (
+        <PrintTicket
+          data={{
+            ticket,
+            when,
+            time: slot.time,
+            doctorName: doctor.name,
+            doctorSpecialty: doctor.specialty,
+            doctorRoom: doctor.room,
+            clinicName: clinic.name,
+            clinicAddress: clinic.address,
+            clinicPhone: clinic.phone,
+            patientName: patient.fullName.trim(),
+            patientPhone: formatPhone(normalisePhone(patient.phone) ?? ""),
+            nfz: clinic.nfz,
+            ...(clinic.priceFrom !== undefined ? { priceFrom: clinic.priceFrom } : {}),
+          }}
+        />
+      )}
     </Dialog>
   );
 }

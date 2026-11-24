@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 400" width="760" height="400" font-family="system-ui, -apple-system, sans-serif">
+  <rect width="760" height="400" rx="16" fill="#f8fafc" stroke="#334155" stroke-width="2.5"/>
+  <text x="32" y="48" font-size="22" font-weight="700" fill="#0f172a">Kalendarz rejestracji (Moje wizyty)</text>
+  <text x="32" y="72" font-size="13" fill="#475569">Automatycznie zapisane wizyty · podgląd kalendarza · wydruk PDF</text>
+
+  <!-- Mini Calendar -->
+  <rect x="32" y="96" width="240" height="248" rx="12" fill="#ffffff" stroke="#475569" stroke-width="2"/>
+  <text x="108" y="128" font-size="14" font-weight="700" fill="#0f172a">listopad 2026</text>
+  <text x="50" y="158" font-size="12" fill="#64748b">pn   wt   śr   cz   pt   sb   nd</text>
+  <text x="50" y="188" font-size="13" fill="#334155">16   17   18   19   20   21   22</text>
+  <rect x="81" y="202" width="26" height="26" rx="6" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="50" y="220" font-size="13" fill="#334155">23   <tspan font-weight="700" fill="#166534">24</tspan>   25   26   27   28   29</text>
+  <text x="50" y="252" font-size="13" fill="#334155">30</text>
+  <rect x="48" y="294" width="14" height="14" rx="3" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="70" y="306" font-size="12" fill="#475569">Dzień z zaplanowaną wizytą</text>
+
+  <!-- Visit Card -->
+  <rect x="296" y="96" width="432" height="248" rx="12" fill="#ffffff" stroke="#16a34a" stroke-width="2.5"/>
+  <rect x="296" y="96" width="432" height="44" rx="10" fill="#15803d"/>
+  <text x="316" y="124" font-size="15" font-weight="700" fill="#ffffff">Wtorek, 24 listopada, godz. 14:30</text>
+  <text x="646" y="124" font-size="14" font-weight="700" fill="#ffffff">#PL-8255</text>
+  <text x="316" y="170" font-size="17" font-weight="700" fill="#0f172a">NZOZ Zdrowie – Winogrady</text>
+  <text x="316" y="194" font-size="13" fill="#475569">os. Wichrowe Wzgórze 20, Poznań · NFZ – bezpłatnie</text>
+  <rect x="316" y="212" width="392" height="58" rx="8" fill="#f1f5f9"/>
+  <text x="330" y="236" font-size="13" font-weight="700" fill="#0f172a">Pacjent: Janina Nowak</text>
+  <text x="330" y="256" font-size="13" fill="#334155">Lekarz: lek. Anna Nowak (POZ) · Gabinet nr 12</text>
+  <rect x="316" y="286" width="185" height="40" rx="8" fill="#0f4c5c"/>
+  <text x="338" y="311" font-size="13" font-weight="700" fill="#ffffff">Drukuj potwierdzenie</text>
+  <rect x="515" y="286" width="150" height="40" rx="8" fill="#ffffff" stroke="#475569" stroke-width="1.5"/>
+  <text x="542" y="311" font-size="13" font-weight="600" fill="#0f172a">Odwołaj wizytę</text>
+
+  <text x="32" y="378" font-size="12" font-weight="600" fill="#475569">Szkic Ekran 3: Kalendarz rejestracji klienta „Moje wizyty” — Autor: Członek zespołu 3</text>
+</svg>

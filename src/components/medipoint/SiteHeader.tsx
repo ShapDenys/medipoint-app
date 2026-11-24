@@ -1,10 +1,11 @@
 import { Link } from "@tanstack/react-router";
-import { Check, Eye, HeartPulse, MapPin, Phone } from "lucide-react";
+import { CalendarDays, Check, Eye, HeartPulse, MapPin, Phone } from "lucide-react";
 import { useState } from "react";
 
 import { Button } from "@/components/ui/button";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import { Switch } from "@/components/ui/switch";
+import { useAppointments } from "@/lib/appointments";
 import { useAppPrefs } from "@/lib/app-prefs";
 import { DISTRICTS, getDistrict } from "@/lib/clinics";
 import { cn } from "@/lib/utils";
@@ -109,6 +110,25 @@ function SeniorToggle() {
   );
 }
 
+function CalendarNavButton() {
+  const { appointments } = useAppointments();
+  const count = appointments.length;
+  return (
+    <Link
+      to="/kalendarz"
+      className="inline-flex min-h-12 items-center gap-2 rounded-full border-2 border-border bg-card px-4 py-1.5 font-semibold text-foreground transition-colors hover:border-primary focus-visible:outline-none focus-visible:ring-[3px] focus-visible:ring-ring"
+    >
+      <CalendarDays aria-hidden="true" className="size-5 shrink-0 text-primary" />
+      <span>Moje wizyty</span>
+      {count > 0 && (
+        <span className="inline-flex min-w-6 items-center justify-center rounded-full bg-cta px-2 py-0.5 text-xs font-bold tabular-nums text-cta-foreground">
+          {count}
+        </span>
+      )}
+    </Link>
+  );
+}
+
 export function SiteHeader() {
   return (
     <header className="no-print relative z-40 md:sticky md:top-0 border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/85">
@@ -124,6 +144,7 @@ export function SiteHeader() {
             <span className="block text-xs font-medium text-muted-foreground senior:hidden">NearClinic · przychodnie blisko Ciebie</span>
           </span>
         </Link>
+        <CalendarNavButton />
         <LocationPicker />
         <SeniorToggle />
       </div>

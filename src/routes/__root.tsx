@@ -13,6 +13,7 @@ import { useEffect, type ReactNode } from "react";
 import appCss from "../styles.css?url";
 import { EmergencyBanner, SiteFooter, SiteHeader } from "@/components/medipoint/SiteHeader";
 import { Toaster } from "@/components/ui/sonner";
+import { AppointmentsProvider } from "@/lib/appointments";
 import { AppPrefsProvider } from "@/lib/app-prefs";
 
 function NotFoundComponent() {
@@ -135,20 +136,22 @@ function RootComponent() {
   return (
     <QueryClientProvider client={queryClient}>
       <AppPrefsProvider>
-        <a
-          href="#main"
-          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-lg focus:bg-primary focus:px-4 focus:py-3 focus:font-semibold focus:text-primary-foreground"
-        >
-          Przejdź do treści
-        </a>
-        <EmergencyBanner />
-        <SiteHeader />
-        <main id="main">
-          {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
-          <Outlet />
-        </main>
-        <SiteFooter />
-        <Toaster position="top-center" richColors closeButton />
+        <AppointmentsProvider>
+          <a
+            href="#main"
+            className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-lg focus:bg-primary focus:px-4 focus:py-3 focus:font-semibold focus:text-primary-foreground"
+          >
+            Przejdź do treści
+          </a>
+          <EmergencyBanner />
+          <SiteHeader />
+          <main id="main">
+            {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
+            <Outlet />
+          </main>
+          <SiteFooter />
+          <Toaster position="top-center" richColors closeButton />
+        </AppointmentsProvider>
       </AppPrefsProvider>
     </QueryClientProvider>
   );

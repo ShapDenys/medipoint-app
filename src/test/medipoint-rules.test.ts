@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
 
+import { appointmentsOnDay, sameCalendarDay, sortAppointments, type BookedAppointment } from "@/lib/appointments";
 import { normalisePhone, validatePatient } from "@/lib/booking";
 import { CLINICS, findClinics, getDistrict, isOpenNow, getClinic } from "@/lib/clinics";
 import { matchSymptoms } from "@/lib/symptoms";
@@ -71,5 +72,44 @@ describe("patient details", () => {
 
   it("accepts +48 prefixed phone numbers", () => {
     expect(normalisePhone("+48 600 123 456")).toBe("600123456");
+  });
+});
+
+describe("appointments calendar helpers", () => {
+  const sampleA: BookedAppointment = {
+    id: "#PL-1001",
+    clinicId: "zdrowie-winogrady",
+    clinicName: "NZOZ Zdrowie – Winogrady",
+    clinicAddress: "os. Wichrowe Wzgórze 20, Poznań",
+    clinicPhone: "61 820 14 30",
+    nfz: true,
+    doctorName: "lek. Anna Kowalczyk",
+    doctorSpecialty: "poz",
+    doctorRoom: "12",
+    dateIso: "2026-11-25T09:30:00.000Z",
+    time: "10:30",
+    patientName: "Janina Nowak",
+    patientPhone: "600 123 456",
+    createdAtIso: "2026-11-24T19:00:00.000Z",
+  };
+
+  const sampleB: BookedAppointment = {
+    ...sampleA,
+    id: "#PL-1002",
+    dateIso: "2026-11-24T08:00:00.000Z",
+    time: "09:00",
+  };
+
+  it("sorts appointments chronologically", () => {
+    const sorted = sortAppointments([sampleA, sampleB]);
+    expect(sorted.map((x) => x.id)).toEqual(["#PL-1002", "#PL-1001"]);
+  });
+
+  it("matches calendar days and filters appointments by day", () => {
+    const day24 = new Date("2026-11-24T12:00:00.000Z");
+    const day25 = new Date("2026-11-25T12:00:00.000Z");
+    expect(sameCalendarDay(new Date(sampleB.dateIso), day24)).toBe(true);
+    expect(sameCalendarDay(new Date(sampleA.dateIso), day24)).toBe(false);
+    expect(appointmentsOnDay([sampleA, sampleB], day25).map((x) => x.id)).toEqual(["#PL-1001"]);
   });
 });

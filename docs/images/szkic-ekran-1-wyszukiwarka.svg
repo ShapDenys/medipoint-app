@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 480" width="760" height="480" font-family="system-ui, -apple-system, sans-serif">
+  <rect width="760" height="480" rx="16" fill="#f8fafc" stroke="#334155" stroke-width="2.5"/>
+  <!-- Header -->
+  <rect x="20" y="18" width="720" height="48" rx="10" fill="#ffffff" stroke="#64748b" stroke-width="2"/>
+  <text x="38" y="48" font-size="18" font-weight="700" fill="#0f172a">MediPoint</text>
+  <rect x="370" y="27" width="110" height="30" rx="15" fill="#e2e8f0" stroke="#475569" stroke-width="1.5"/>
+  <text x="388" y="47" font-size="13" font-weight="600" fill="#0f172a">Moje wizyty</text>
+  <rect x="492" y="27" width="115" height="30" rx="15" fill="#e2e8f0" stroke="#475569" stroke-width="1.5"/>
+  <text x="506" y="47" font-size="13" font-weight="600" fill="#0f172a">Poznań, Zmien</text>
+  <rect x="618" y="27" width="110" height="30" rx="15" fill="#0f172a"/>
+  <text x="632" y="47" font-size="13" font-weight="700" fill="#ffffff">Tryb Seniora</text>
+
+  <!-- Hero + Search -->
+  <text x="32" y="102" font-size="22" font-weight="700" fill="#0f172a">Lekarz blisko domu. Wizyta w 3 krokach.</text>
+  <rect x="32" y="118" width="440" height="42" rx="10" fill="#ffffff" stroke="#334155" stroke-width="2"/>
+  <text x="48" y="144" font-size="14" fill="#64748b">Wpisz dzielnicę, przychodnię lub lekarza...</text>
+  <rect x="484" y="118" width="120" height="42" rx="10" fill="#ffffff" stroke="#334155" stroke-width="2"/>
+  <text x="502" y="144" font-size="13" font-weight="600" fill="#0f172a">Wykryj GPS</text>
+  <rect x="614" y="118" width="114" height="42" rx="10" fill="#0f4c5c"/>
+  <text x="642" y="144" font-size="14" font-weight="700" fill="#ffffff">Szukaj</text>
+
+  <!-- Filters -->
+  <rect x="32" y="172" width="90" height="28" rx="14" fill="#0f4c5c"/>
+  <text x="50" y="191" font-size="12" font-weight="600" fill="#ffffff">Wszystkie</text>
+  <rect x="132" y="172" width="115" height="28" rx="14" fill="#ffffff" stroke="#64748b" stroke-width="1.5"/>
+  <text x="148" y="191" font-size="12" fill="#0f172a">NFZ (Bezpłatne)</text>
+  <rect x="257" y="172" width="110" height="28" rx="14" fill="#ffffff" stroke="#64748b" stroke-width="1.5"/>
+  <text x="272" y="191" font-size="12" fill="#0f172a">Wolne dzisiaj</text>
+
+  <!-- Clinic Cards -->
+  <rect x="32" y="218" width="340" height="215" rx="14" fill="#ffffff" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="50" y="248" font-size="17" font-weight="700" fill="#0f172a">NZOZ Zdrowie – Winogrady</text>
+  <text x="50" y="272" font-size="13" fill="#475569">os. Wichrowe Wzgórze 20 · 440 m (6 min)</text>
+  <rect x="50" y="288" width="304" height="34" rx="8" fill="#dcfce7"/>
+  <text x="64" y="310" font-size="13" font-weight="700" fill="#166534">Wolne terminy DZISIAJ: 14:30, 15:15</text>
+  <rect x="50" y="340" width="304" height="52" rx="12" fill="#15803d"/>
+  <text x="86" y="372" font-size="15" font-weight="700" fill="#ffffff">UMÓW WIZYTĘ W TEJ PRZYCHODNI</text>
+  <text x="115" y="414" font-size="12" fill="#64748b">Najbliżej: dziś 14:30 · gabinet 12</text>
+
+  <rect x="390" y="218" width="338" height="215" rx="14" fill="#ffffff" stroke="#64748b" stroke-width="2"/>
+  <text x="408" y="248" font-size="17" font-weight="700" fill="#0f172a">Przychodnia Rejonowa nr 4</text>
+  <text x="408" y="272" font-size="13" fill="#475569">os. Pod Lipami 4 · 800 m (10 min)</text>
+  <rect x="408" y="288" width="302" height="34" rx="8" fill="#f1f5f9"/>
+  <text x="422" y="310" font-size="13" font-weight="600" fill="#334155">Najbliższy termin: JUTRO 09:15</text>
+  <rect x="408" y="340" width="302" height="52" rx="12" fill="#15803d"/>
+  <text x="444" y="372" font-size="15" font-weight="700" fill="#ffffff">UMÓW WIZYTĘ W TEJ PRZYCHODNI</text>
+
+  <text x="32" y="462" font-size="12" font-weight="600" fill="#475569">Szkic Ekran 1: Strona główna i widoczny przycisk CTA na karcie przychodni — Autor: Denys</text>
+</svg>

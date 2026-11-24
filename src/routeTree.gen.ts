@@ -10,11 +10,17 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as KalendarzRouteImport } from './routes/kalendarz'
 import { Route as PrzychodniaClinicIdRouteImport } from './routes/przychodnia.$clinicId'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const KalendarzRoute = KalendarzRouteImport.update({
+  id: '/kalendarz',
+  path: '/kalendarz',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PrzychodniaClinicIdRoute = PrzychodniaClinicIdRouteImport.update({
@@ -25,27 +31,31 @@ const PrzychodniaClinicIdRoute = PrzychodniaClinicIdRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/kalendarz': typeof KalendarzRoute
   '/przychodnia/$clinicId': typeof PrzychodniaClinicIdRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/kalendarz': typeof KalendarzRoute
   '/przychodnia/$clinicId': typeof PrzychodniaClinicIdRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/kalendarz': typeof KalendarzRoute
   '/przychodnia/$clinicId': typeof PrzychodniaClinicIdRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/przychodnia/$clinicId'
+  fullPaths: '/' | '/kalendarz' | '/przychodnia/$clinicId'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/przychodnia/$clinicId'
-  id: '__root__' | '/' | '/przychodnia/$clinicId'
+  to: '/' | '/kalendarz' | '/przychodnia/$clinicId'
+  id: '__root__' | '/' | '/kalendarz' | '/przychodnia/$clinicId'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  KalendarzRoute: typeof KalendarzRoute
   PrzychodniaClinicIdRoute: typeof PrzychodniaClinicIdRoute
 }
 
@@ -56,6 +66,13 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/kalendarz': {
+      id: '/kalendarz'
+      path: '/kalendarz'
+      fullPath: '/kalendarz'
+      preLoaderRoute: typeof KalendarzRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/przychodnia/$clinicId': {
@@ -70,6 +87,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  KalendarzRoute: KalendarzRoute,
   PrzychodniaClinicIdRoute: PrzychodniaClinicIdRoute,
 }
 export const routeTree = rootRouteImport
