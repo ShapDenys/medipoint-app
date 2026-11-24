@@ -50,10 +50,16 @@ function CalendarPage() {
 
   useEffect(() => {
     if (!printing) return;
-    const id = requestAnimationFrame(() => {
-      window.print();
+    let raf2 = 0;
+    const raf1 = requestAnimationFrame(() => {
+      raf2 = requestAnimationFrame(() => {
+        window.print();
+      });
     });
-    return () => cancelAnimationFrame(id);
+    return () => {
+      cancelAnimationFrame(raf1);
+      cancelAnimationFrame(raf2);
+    };
   }, [printing]);
 
   useEffect(() => {
@@ -239,7 +245,7 @@ function CalendarPage() {
         </div>
       )}
 
-      {printing && <PrintTicket data={toPrintData(printing)} />}
+      <PrintTicket data={printing ? toPrintData(printing) : null} />
     </div>
   );
 }
