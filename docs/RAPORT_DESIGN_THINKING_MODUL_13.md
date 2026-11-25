@@ -103,5 +103,5 @@ Przejście przez wszystkie etapy myślenia projektowego pozwoliło skupić się 
 
 ### Podpisy członków grupy:
 
-1. Denys Shapovalov .................................................................. (Data: ......................)
-2. .................................................................................... (Data: ......................)
+1. Denys Shapovalov 
+2. Mariia Hetmanova
