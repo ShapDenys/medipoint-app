@@ -9,7 +9,7 @@
 * **Zidentyfikowany problem:** Użytkowników irytuje układ graficzny aplikacji, a szczególnie trudności w znalezieniu właściwych przycisków służących do rezerwacji wizyty.
 * **Członkowie zespołu projektowego:**
   1. **Denys Shapovalov**
-  2. ............................................................
+  2. **Mariia Hetmonova**
 * **Data sporządzenia raportu:** 24 listopada 2026 r.
 
 ---
