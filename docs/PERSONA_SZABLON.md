@@ -1,5 +1,4 @@
 # Szablon Persona – Moduł 13: Myślenie Projektowe
-*Intel® AI dla Przyszłych Pracowników*
 
 ---
 

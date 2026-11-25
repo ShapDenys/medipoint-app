@@ -1,5 +1,4 @@
 # Raport z Projektu: Myślenie Projektowe (Design Thinking) – Moduł 13
-**Intel® AI dla Przyszłych Pracowników**
 
 ---
 
@@ -9,7 +8,7 @@
 * **Zidentyfikowany problem:** Użytkowników irytuje układ graficzny aplikacji, a szczególnie trudności w znalezieniu właściwych przycisków służących do rezerwacji wizyty.
 * **Członkowie zespołu projektowego:**
   1. **Denys Shapovalov**
-  2. **Mariia Hetmonova**
+  2. **Mariia Hetmanova**
 * **Data sporządzenia raportu:** 24 listopada 2026 r.
 
 ---
@@ -103,5 +102,5 @@ Przejście przez wszystkie etapy myślenia projektowego pozwoliło skupić się 
 
 ### Podpisy członków grupy:
 
-1. Denys Shapovalov 
+1. Denys Shapovalov
 2. Mariia Hetmanova
