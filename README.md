@@ -69,4 +69,4 @@ npm run build  # Budowanie wersji produkcyjnej
 ## Wykonawcy
 
 - Denys Shapovalov
-- ............................................................
+- Mariia Hetmanova
