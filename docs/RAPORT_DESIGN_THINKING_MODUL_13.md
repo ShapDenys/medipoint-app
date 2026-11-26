@@ -7,7 +7,6 @@
 * **Projektanci:**
   1. **Denys Shapovalov**
   2. **Mariia Hetmanova**
-* **Data sporządzenia raportu:** 24 listopada 2026 r.
 
 ## 1. Faza Empatii (Empathise)
 
