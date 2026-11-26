@@ -53,28 +53,28 @@ Podczas burzy mózgów zebrano hasłowo różne pomysły na rozwiązanie problem
 Przygotowano wstępne szkice ekranów rozwiązujących zidentyfikowane problemy:
 
 1. **Ekran 1 – Strona główna i karta przychodni z widocznym przyciskiem CTA**  
-   ![Szkic Ekranu 1](images/szkic-ekran-1-wyszukiwarka.svg)
+   ![Szkic Ekranu 1](https://raw.githubusercontent.com/ShapDenys/medipoint-app/main/docs/images/szkic-ekran-1-wyszukiwarka.png)
 
 2. **Ekran 2 – 3-krokowy formularz rezerwacji i potwierdzenie**  
-   ![Szkic Ekranu 2](images/szkic-ekran-2-rezerwacja.svg)
+   ![Szkic Ekranu 2](https://raw.githubusercontent.com/ShapDenys/medipoint-app/main/docs/images/szkic-ekran-2-rezerwacja.png)
 
 3. **Ekran 3 – Kalendarz rejestracji klienta („Moje wizyty”)**  
-   ![Szkic Ekranu 3](images/szkic-ekran-3-kalendarz.svg)
+   ![Szkic Ekranu 3](https://raw.githubusercontent.com/ShapDenys/medipoint-app/main/docs/images/szkic-ekran-3-kalendarz.png)
 
 ### 4.2. Finalne rozwiązanie – działająca aplikacja MediPoint
 Po wymianie opinii w zespole połączono wszystkie elementy w jedną spójną aplikację webową **MediPoint** (zbudowaną w TanStack Start, React, Vite, Tailwind CSS i shadcn/ui):
 
 * **Ekran główny:** wyszukiwarka przychodni, wybór dzielnicy lub GPS, szybkie filtry, Asystent MediPoint oraz lista/mapa przychodni z dużym zielonym przyciskiem `UMÓW WIZYTĘ W TEJ PRZYCHODNI`.  
-  ![Finalna strona główna MediPoint](screenshots/01-strona-glowna.png)
+  ![Finalna strona główna MediPoint](https://raw.githubusercontent.com/ShapDenys/medipoint-app/main/docs/screenshots/01-strona-glowna.png)
 
 * **Tryb Seniora / Duży Tekst:** przełącznik w nagłówku zwiększający czcionkę o 25%, podnoszący kontrast i ukrywający zbędne elementy.  
-  ![Finalny Tryb Seniora](screenshots/02-tryb-seniora.png)
+  ![Finalny Tryb Seniora](https://raw.githubusercontent.com/ShapDenys/medipoint-app/main/docs/screenshots/02-tryb-seniora.png)
 
 * **3-krokowa rezerwacja i potwierdzenie:** wybór dnia i godziny, dane pacjenta, a następnie czytelne potwierdzenie z biletem `#PL-xxxx` i wydrukiem dużym drukiem (PDF).  
-  ![Finalne potwierdzenie rezerwacji](screenshots/03-rezerwacja-potwierdzenie.png)
+  ![Finalne potwierdzenie rezerwacji](https://raw.githubusercontent.com/ShapDenys/medipoint-app/main/docs/screenshots/03-rezerwacja-potwierdzenie.png)
 
 * **Kalendarz rejestracji („Moje wizyty”):** każda potwierdzona wizyta trafia automatycznie do kalendarza w aplikacji, gdzie można ją obejrzeć, wydrukować lub odwołać.  
-  ![Finalny kalendarz wizyt](screenshots/04-kalendarz-wizyt.png)
+  ![Finalny kalendarz wizyt](https://raw.githubusercontent.com/ShapDenys/medipoint-app/main/docs/screenshots/04-kalendarz-wizyt.png)
 
 ## 5. Podsumowanie
 
