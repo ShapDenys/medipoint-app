@@ -3,11 +3,9 @@
 * **Projekt:** Usprawnienie rezerwacji wizyt w aplikacji medycznej „MediPoint / Bliska Przychodnia”
 * **Data badania:** 18 listopada 2026 r.
 * **Miejsce:** Mieszkanie respondentki, Poznań
-* **Prowadzący badanie (Moderator):** Denys
+* **Prowadzący badanie (Moderator):** Zespół projektowy
 * **Respondentka:** Pani Janina Nowak (68 l., emerytowana nauczycielka)
 * **Urządzenie:** Smartfon Samsung Galaxy A33 (Android, ekran 6.4 cala)
-
----
 
 ## Część 1: Rozmowa Wstępna (Wprowadzenie i Kontekst)
 
@@ -22,8 +20,6 @@
 **Moderator:** O, a co się wtedy wydarzyło? Dlaczego nic z tego nie wyszło?
 
 **Pani Janina:** Siedziałam nad tym pół godziny, okulary założyłam te mocniejsze do czytania. Niby znalazłam naszą przychodnię na Winogradach, ale nigdzie nie było napisane, co zrobić, żeby się zapisać! Było zdjęcie budynku, jakieś godziny, że otwarta od 8 do 18, a jak kliknęłam w ekran, to mi się włączyła nawigacja samochodowa! Pomyślałam: Jezus Maria, jeszcze coś popsuję albo mi jakieś pieniądze z konta ściągnie. Wyłączyłam to w diabły i zadzwoniłam po syna.
-
----
 
 ## Część 2: Test Obserwacyjny na Starej Aplikacji
 
@@ -47,9 +43,7 @@
 
 **Moderator:** Proszę spojrzeć na sam dół ekranu, pod regulaminem.
 
-**Pani Janina:** Pod regulaminem? Taki mały szary paseczek z napisem „Dostępne świadczenia”? No panie Denysie, przecież to wygląda jak zwykły szary napis, a nie żaden przycisk! Klikam w to... O, rozwinęło się kolejne menu z 10 pozycjami: „Medycyna pracy”, „Badania laboratoryjne”, „Poradnia POZ”. I znowu obok mały ołóweczek. Kto to projektował? Młodzież chyba, co ma wzrok jak sokół i palce jak patyczki. Ja tu nic nie widzę, denerwuję się tylko. Rezygnuję.
-
----
+**Pani Janina:** Pod regulaminem? Taki mały szary paseczek z napisem „Dostępne świadczenia”? Przecież to wygląda jak zwykły szary napis, a nie żaden przycisk! Klikam w to... O, rozwinęło się kolejne menu z 10 pozycjami: „Medycyna pracy”, „Badania laboratoryjne”, „Poradnia POZ”. I znowu obok mały ołóweczek. Kto to projektował? Młodzież chyba, co ma wzrok jak sokół i palce jak patyczki. Ja tu nic nie widzę, denerwuję się tylko. Rezygnuję.
 
 ## Część 3: Pytania Podsumowujące i Oczekiwania
 

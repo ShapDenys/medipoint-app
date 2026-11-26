@@ -1,17 +1,13 @@
 # Raport z Projektu: Myślenie Projektowe (Design Thinking) – Moduł 13
 
----
-
 ## Metryka Projektu
 
 * **Temat zadania:** Usprawnienie aplikacji do wyszukiwania najbliższej przychodni oraz rezerwacji wizyty lekarskiej.
 * **Zidentyfikowany problem:** Użytkowników irytuje układ graficzny aplikacji, a szczególnie trudności w znalezieniu właściwych przycisków służących do rezerwacji wizyty.
-* **Członkowie zespołu projektowego:**
+* **Projektanci:**
   1. **Denys Shapovalov**
   2. **Mariia Hetmanova**
 * **Data sporządzenia raportu:** 24 listopada 2026 r.
-
----
 
 ## 1. Faza Empatii (Empathise)
 
@@ -27,14 +23,6 @@ W celu poznania potrzeb użytkowników oraz zrozumienia, dlaczego obecny interfe
 * **Cytat z wywiadu:**
   > *„Chcę od razu widzieć duży, wyraźny przycisk »Umów wizytę« i mieć pewność, że termin jest potwierdzony, a nie błądzić po małych ikonkach i bać się, że coś zepsuję!”*
 
-### 1.2. Podsumowanie Persony
-Szczegółowa karta Persony została uzupełniona w oficjalnym szablonie prezentacji oraz w dokumencie tekstowym:
-* **Plik prezentacji:** [`docs/Module_13_Persona_Wypelniona.pptx`](./Module_13_Persona_Wypelniona.pptx)
-* **Wersja tekstowa:** [`docs/PERSONA_SZABLON.md`](./PERSONA_SZABLON.md)
-* **Zapis wywiadu:** [`docs/TRANSKRYPCJA_WYWIADU.md`](./TRANSKRYPCJA_WYWIADU.md)
-
----
-
 ## 2. Faza Definicji Perspektywy (Define)
 
 Na podstawie zebranych informacji z fazy empatii sformułowano zwięzłą definicję perspektywy (**Point of View – POV**):
@@ -45,8 +33,6 @@ Na podstawie zebranych informacji z fazy empatii sformułowano zwięzłą defini
 1. Przycisk rezerwacji musi być głównym, najbardziej widocznym elementem na każdej karcie przychodni.
 2. Interfejs powinien oferować tryb zwiększonej czytelności (większy tekst, wyższy kontrast) bez zbędnych elementów rozpraszających.
 3. Proces rezerwacji powinien być krótki (maksymalnie 3 proste kroki) i kończyć się czytelnym potwierdzeniem oraz zapisaniem wizyty w kalendarzu.
-
----
 
 ## 3. Faza Koncepcji / Burza Mózgów (Ideate)
 
@@ -61,22 +47,19 @@ Podczas burzy mózgów zebrano hasłowo różne pomysły na rozwiązanie problem
 * Rezerwacja podzielona na **3 proste kroki**: wybór terminu → dane pacjenta → potwierdzenie.
 * **Automatyczny kalendarz wizyt („Moje wizyty”)** w aplikacji, żeby pacjent nie musiał pobierać osobnych plików kalendarza.
 * Czytelny **wydruk potwierdzenia dużym drukiem (PDF)** z wyraźnym imieniem pacjenta, adresem i godziną.
-* *(Pomysł wybiegający w przyszłość)* Fizyczny przycisk IoT w domu seniora do zamawiania wizyty u stałego lekarza lub pełna obsługa głosowa.
-
----
 
 ## 4. Faza Prototypu (Prototype)
 
 ### 4.1. Wstępne szkice ekranów (etap koncepcyjny)
-Każdy członek zespołu przygotował wstępny szkic ekranów rozwiązujących zidentyfikowane problemy:
+Przygotowano wstępne szkice ekranów rozwiązujących zidentyfikowane problemy:
 
-1. **Ekran 1 – Strona główna i karta przychodni z widocznym przyciskiem CTA** *(Autor: Denys)*  
+1. **Ekran 1 – Strona główna i karta przychodni z widocznym przyciskiem CTA**  
    ![Szkic Ekranu 1](images/szkic-ekran-1-wyszukiwarka.svg)
 
-2. **Ekran 2 – 3-krokowy formularz rezerwacji i potwierdzenie** *(Autor: Członek zespołu 2)*  
+2. **Ekran 2 – 3-krokowy formularz rezerwacji i potwierdzenie**  
    ![Szkic Ekranu 2](images/szkic-ekran-2-rezerwacja.svg)
 
-3. **Ekran 3 – Kalendarz rejestracji klienta („Moje wizyty”)** *(Autor: Członek zespołu 3)*  
+3. **Ekran 3 – Kalendarz rejestracji klienta („Moje wizyty”)**  
    ![Szkic Ekranu 3](images/szkic-ekran-3-kalendarz.svg)
 
 ### 4.2. Finalne rozwiązanie – działająca aplikacja MediPoint
@@ -94,13 +77,11 @@ Po wymianie opinii w zespole połączono wszystkie elementy w jedną spójną ap
 * **Kalendarz rejestracji („Moje wizyty”):** każda potwierdzona wizyta trafia automatycznie do kalendarza w aplikacji, gdzie można ją obejrzeć, wydrukować lub odwołać.  
   ![Finalny kalendarz wizyt](screenshots/04-kalendarz-wizyt.png)
 
----
-
 ## 5. Podsumowanie
 
 Przejście przez wszystkie etapy myślenia projektowego pozwoliło skupić się na najważniejszym problemie użytkowników: braku widocznych i jednoznacznych przycisków rezerwacji. W efekcie powstała aplikacja **MediPoint**, która zamiast przeładowanego interfejsu oferuje czytelne przyciski CTA, Tryb Seniora, asystenta doboru lekarza, 3-krokowy proces rezerwacji, czytelny wydruk potwierdzenia oraz automatyczny kalendarz wizyt.
 
-### Podpisy członków grupy:
+### Projektanci:
 
 1. Denys Shapovalov
 2. Mariia Hetmanova

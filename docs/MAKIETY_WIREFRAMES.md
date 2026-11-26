@@ -15,8 +15,6 @@
 * **Rezerwacja w 3 prostych krokach:** Krok 1 (Termin) → Krok 2 (Dane pacjenta) → Krok 3 (Potwierdzenie z numerem biletu i wydrukiem dużym drukiem).
 * **Kalendarz rejestracji („Moje wizyty”):** automatyczne zapisywanie potwierdzonych wizyt w kalendarzu w aplikacji (`/kalendarz`).
 
----
-
 ## 2. Szkice ekranów i zrzuty z aplikacji
 
 * [Szkic Ekranu 1 – Strona główna i lista przychodni](images/szkic-ekran-1-wyszukiwarka.svg)

@@ -2,8 +2,6 @@
 
 Aplikacja webowa do szybkiego wyszukiwania najbliższych przychodni w Poznaniu oraz rezerwacji wizyt lekarskich w 3 krokach, zaprojektowana z myślą o czytelności i dostępności (w tym dla seniorów).
 
----
-
 ## Zrzuty ekranu
 
 ### Strona główna i wyszukiwarka przychodni
@@ -18,8 +16,6 @@ Aplikacja webowa do szybkiego wyszukiwania najbliższych przychodni w Poznaniu o
 ### Kalendarz rejestracji klienta („Moje wizyty”)
 ![Kalendarz wizyt w MediPoint](docs/screenshots/04-kalendarz-wizyt.png)
 
----
-
 ## Główne funkcje
 
 - **Wyszukiwarka i filtry przychodni:** wyszukiwanie po nazwie, dzielnicy lub specjalizacji w Poznaniu (*Winogrady*, *Piątkowo*, *Jeżyce*, *Stare Miasto*, *Rataje*), obsługa lokalizacji GPS (Geolocation API) oraz szybkie filtry (*Wszystkie*, *NFZ (Bezpłatne)*, *Otwarte teraz*, *Wolne terminy dzisiaj*).
@@ -30,16 +26,12 @@ Aplikacja webowa do szybkiego wyszukiwania najbliższych przychodni w Poznaniu o
 - **Kalendarz rejestracji („Moje wizyty”):** każda potwierdzona wizyta automatycznie zapisuje się w kalendarzu użytkownika w przeglądarce (`localStorage`), z podglądem dni w kalendarzu, wydrukiem potwierdzenia i możliwością odwołania wizyty.
 - **Baner alarmowy 112:** stały przycisk połączenia alarmowego w górnej części strony.
 
----
-
 ## Technologie
 
 - **Framework:** TanStack Start + TanStack Router + React 19
 - **Budowanie:** Vite 8 + TypeScript
 - **Style i komponenty:** Tailwind CSS v4 + shadcn/ui (Radix UI) + Lucide Icons
 - **Testy:** Vitest + Testing Library
-
----
 
 ## Uruchomienie lokalne
 
@@ -63,8 +55,6 @@ Aplikacja będzie dostępna pod adresem `http://localhost:3000`.
 npm test       # Uruchomienie testów jednostkowych (Vitest)
 npm run build  # Budowanie wersji produkcyjnej
 ```
-
----
 
 ## Wykonawcy
 

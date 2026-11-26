@@ -1,7 +1,5 @@
 # Szablon Persona – Moduł 13: Myślenie Projektowe
 
----
-
 ## 1. Dane Demograficzne
 
 | Cecha | Wartość |
@@ -14,13 +12,9 @@
 | **Poziom cyfrowy** | Podstawowy (smartfon do codziennej komunikacji) |
 | **Archetyp użytkownika**| Ostrożny Senior / Praktyczny Tradycjonalista |
 
----
-
 ## 2. Cytat Przewodni
 
 > *„Chcę od razu widzieć duży, wyraźny przycisk »Zarezerwuj wizytę« i mieć pewność, że termin jest potwierdzony, a nie błądzić po małych ikonkach i bać się, że coś zepsuję!”*
-
----
 
 ## 3. Cele (Do Osiągnięcia)
 
@@ -29,8 +23,6 @@
 3. **Poczucie bezpieczeństwa i potwierdzenie:** Wymaga natychmiastowej, czytelnej informacji zwrotnej (SMS na telefon z adresem, nazwiskiem lekarza i godziną).
 4. **Niezależność od rodziny:** Bardzo zależy jej na tym, aby móc samodzielnie dbać o swoje zdrowie i nie prosić ciągle dzieci o zamawianie wizyt.
 
----
-
 ## 4. Frustracje (Problemy)
 
 1. **Małe, ukryte przyciski:** Przyciski rezerwacji zlewają się z tłem, mają szare kolory, małe fonty i wyglądają jak zwykły tekst lub nagłówek.
@@ -38,15 +30,11 @@
 3. **Lęk przed błędem i kosztami:** Boi się, że kliknięcie złego elementu spowoduje płatną subskrypcję, skasowanie danych lub niepoprawną rezerwację.
 4. **Zmuszanie do kontaktu telefonicznego:** Gdy aplikacja zawodzi, musi dzwonić do rejestracji i czekać kilkadziesiąt minut w kolejce na linii telefonicznej.
 
----
-
 ## 5. Biogram (BIO)
 
 Pani Janina ma 68 lat i mieszka na poznańskich Winogradach. Od 5 lat jest na emeryturze, wcześniej uczyła języka polskiego w szkole podstawowej. Z uwagi na przewlekłe nadciśnienie tętnicze musi regularnie (co 1–2 miesiące) pojawiać się w przychodni POZ na kontrolę i wypisanie recept.
 
 Smartfona kupiły jej dzieci 3 lata temu. Sprawnie dzwoni, pisze wiadomości na WhatsAppie i czyta lokalne wiadomości w przeglądarce. Nie lubi jednak skomplikowanych aplikacji bankowych czy medycznych, w których „nigdy nie wiadomo, co kliknąć”. Gdy jej rejonowa przychodnia ogłosiła możliwość rezerwacji przez aplikację, ucieszyła się, lecz po próbie skorzystania poczuła się bezradna – mapa nie pokazywała jasno, gdzie kliknąć, a przycisk potwierdzenia był niewidoczny. Bardzo pragnie prostego narzędzia, które przywróci jej poczucie cyfrowej samodzielności.
-
----
 
 ## 6. Motywacja (Poziomy na pasku)
 
@@ -57,8 +45,6 @@ Smartfona kupiły jej dzieci 3 lata temu. Sprawnie dzwoni, pisze wiadomości na 
 * **Władza (Kontrola / zaawansowane opcje):** `[█░░░░░░░░░]` **10%** — nie potrzebuje rozbudowanych paneli ani konfiguracji.
 * **Zysk społeczny (Pomoc innym / polecenie):** `[█████░░░░░]` **50%** — chętnie poleci dobrą, prostą aplikację koleżankom z osiedla.
 
----
-
 ## 7. Osobowość
 
 | Wymiar | Wskaźnik | Wyjaśnienie |
@@ -67,8 +53,6 @@ Smartfona kupiły jej dzieci 3 lata temu. Sprawnie dzwoni, pisze wiadomości na 
 | **Zmysły vs Intuicja** | `◄──●─────────────►` | Konkretna, potrzebuje widzieć fakty, duże litery i jasne instrukcje. |
 | **Myślenie vs Czucie** | `◄─────────────●──►` | Kieruje się zaufaniem do lekarza, empatią i komfortem psychicznym. |
 | **Osąd vs Percepcja** | `◄───●────────────►` | Zorganizowana, lubi planować wizyty z wyprzedzeniem i mieć potwierdzenie. |
-
----
 
 ## 8. Wykorzystanie Technologii
 
